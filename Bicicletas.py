@@ -1,35 +1,30 @@
-saldo = 0
-acumIngresos = 0
-acumEgresos = 0
-
 isOn = int(input("Ingrese 1 para Inicialziar el servicio: "))
 
+menu = """
+1. Registro
+2. Opcion2
+3. Opcion3
+"""
 while isOn != 0:
-    opc = int(input("1. Ingreso:\n2. Egresos:\n3. Salir\n"))
+    opc = int(input(menu))
     if opc == 1:
-        ingreso = int(input("Registre el Ingreso\n"))
-        saldo = saldo + ingreso 
-        print(f"Su saldo es: ${saldo}")
-        acumIngresos += 1
-        print(acumIngresos)
+        print("----SISTEMA DE RESGITRO ACTIVADO----")
+        name = input("Escriba su nombre: ")
+        lastname = input("Escriba sus apellidos: ")
+        age = input("Escriba su edad: ")
+        emailaddress = input("Escriba su nuevo correo: ")
+        password = input("Escriba su contraseña: ")
+        print("----REGISTRO HECHO----")
     elif opc ==2:
-        egreso = int(input("Registre su monto a Retirar: "))
-        saldo = saldo - egreso 
-        if saldo < 0:
-            print("Saldo Insuficiente")
-            saldo = saldo + ingreso
-            print(saldo)
-        
+        loginuser = input("Escriba su correo actual: ")
+        loginpassword = input("Escriba su contraseña actual: ")
+        captcha = int(input("How much is 9.5 + 90.5? "))
+        if (emailaddress == loginuser or password == loginpassword) and captcha == 100:
+             print("----SESIÓN INICIADA----")
         else:
-            print(f"Su saldo es: ${saldo}")
-        acumEgresos += 1
-        print(acumEgresos)
+              print("----CORREO, CONTRASEÑA O CAPTCHAT INCORRECTA----")
     elif opc == 3:
         print("Salir")
         isOn = 0
     else:
         print("Ingrese una opcion valida")
-        
-
-#RegistreIngresos = float(input("Consigne su dinero: "))
-#print("Su dinero Consignado es" +RegistreIngresos)
