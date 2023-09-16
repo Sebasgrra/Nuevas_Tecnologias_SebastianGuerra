@@ -1,8 +1,8 @@
 Menu = """ 
 Menu 
-1- Create account 
-2- Login
-3- Exit 
+1- Create account.
+2- Login.
+3- Exit.
 """
 
 while True:
