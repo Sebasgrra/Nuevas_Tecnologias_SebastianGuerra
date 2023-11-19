@@ -26,7 +26,6 @@ class RegistroCarros:
         for carro in self.carros.values():
             print(f"ID: {carro.id}, Marca: {carro.marca}, Modelo: {carro.modelo}, Precio de Venta: {carro.precio_de_venta:.2f}")
 
-# Función para obtener datos del usuario
 def obtener_datos_carro():
     id = int(input("ID del carro: "))
     marca = input("Marca del carro: ")
@@ -35,7 +34,7 @@ def obtener_datos_carro():
     cantidad = int(input("Cantidad de carros: "))
     return Carro(id, marca, modelo, costo, cantidad)
 
-# Ejemplo de uso
+
 if __name__ == "__main__":
     registro = RegistroCarros()
     
